@@ -578,4 +578,20 @@ current_time(struct inode *ip)
 }
 #endif
 
+/*
+ * 4.14 adds SB_* flag definitions, define them to MS_* equivalents
+ * if not set.
+ */
+#ifndef SB_RDONLY
+#define SB_RDONLY MS_RDONLY
+#endif
+
+#ifndef SB_SILENT
+#define SB_SILENT MS_SILENT
+#endif
+
+#ifndef SB_ACTIVE
+#define SB_ACTIVE MS_ACTIVE
+#endif
+
 #endif /* _ZFS_VFS_H */
